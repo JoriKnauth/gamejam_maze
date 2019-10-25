@@ -28,12 +28,24 @@ public class Char_ : MonoBehaviour
 
     }
 
+    private bool isZoomedOut;
+    public MapCamera mapCamera;
 
+    public UI uI;
 
     void Update()
     {
         if (CheckButtonCoolDown())
         {
+            if (Input.anyKey)
+            {
+                SetButtonCoolDown();
+                if (isZoomedOut)
+                {
+                    mapCamera.ZoomIn();
+                }
+            }
+
             if (Input.GetKey(KeyCode.W))
             {
                 SetButtonCoolDown();
@@ -127,6 +139,15 @@ public class Char_ : MonoBehaviour
         if (_trigger != null)
         {
             trigger = _trigger;
+            return;
+        }
+
+        Collectable _collectable = other.GetComponent<Collectable>();
+        if (_collectable != null)
+        {
+            uI.SetListItem(_collectable.ID);
+
+            _collectable.thisGameObject.SetActive(false);
         }
     }
 
@@ -137,5 +158,10 @@ public class Char_ : MonoBehaviour
         {
             trigger = null;
         }
+    }
+
+    public void SetZoomedOut(bool _isZoomedOut)
+    {
+        isZoomedOut = _isZoomedOut;
     }
 }

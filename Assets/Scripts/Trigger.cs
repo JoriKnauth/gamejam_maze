@@ -6,7 +6,12 @@ public class Trigger : MonoBehaviour
 {
     public Triggerable[] triggereable;
 
+    private GameManager gameManager;
 
+    private void Start()
+    {
+        gameManager = GameManager.Instance;
+    }
 
     public virtual void DOTrigger()
     {
@@ -20,6 +25,6 @@ public class Trigger : MonoBehaviour
 
     public void SetCamera()
     {
-
+        gameManager.MapCamera.ZoomOut();
     }
 }
