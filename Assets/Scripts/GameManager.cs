@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
     internal void Win()
     {
         winScreen.SetActive(true);
-        SceneManager.LoadScene(0);
+
         if (winScreenAnimation != null)
         {
             winScreenAnimation.SetTrigger("Win");
@@ -36,6 +36,11 @@ public class GameManager : MonoBehaviour
                 WinMeshes[i].SetActive(true);
             }
         }
+    }
+
+    public void LoadLevel()
+    {
+        SceneManager.LoadScene(0);
     }
 
     private void Awake()
