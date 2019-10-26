@@ -107,6 +107,7 @@ public class Char_ : MonoBehaviour
         RaycastHit hit = new RaycastHit();
         ray = new Ray(thistransform.position, thistransform.forward);
 
+
         if (Physics.Raycast(ray, out hit, distanceCheck, collisionMask, QueryTriggerInteraction.Collide))
         {
             if (hit.collider != null)

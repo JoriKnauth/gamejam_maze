@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7419600042726956953}
   - component: {fileID: 4337586960885441257}
   - component: {fileID: 6777476054938931072}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: DarkBlue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 3505870722854566076}
   - component: {fileID: 8448019082290902678}
   - component: {fileID: 5412868231209786253}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Box001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -168,7 +168,7 @@ GameObject:
   - component: {fileID: 1784102487941771384}
   - component: {fileID: 4030699244205196192}
   - component: {fileID: -7188033360232117761}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
