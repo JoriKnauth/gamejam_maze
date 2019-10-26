@@ -24,10 +24,7 @@ public class GameManager : MonoBehaviour
     {
         winScreen.SetActive(true);
 
-        if (winScreenAnimation != null)
-        {
-            winScreenAnimation.SetTrigger("Win");
-        }
+        StartCoroutineWaitForSec();
 
         for (int i = 0; i < winItems; i++)
         {
@@ -57,4 +54,21 @@ public class GameManager : MonoBehaviour
     {
         winItems++;
     }
+
+    void StartCoroutineWaitForSec()
+    {
+        StartCoroutine(Example());
+    }
+
+    IEnumerator Example()
+    {
+        yield return new WaitForSeconds(winScreenDelay);
+
+        if (winScreenAnimation != null)
+        {
+            winScreenAnimation.SetTrigger("Win");
+        }
+    }
+
+
 }
