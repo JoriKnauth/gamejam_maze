@@ -34,6 +34,8 @@ public class Char_ : MonoBehaviour
     public UI uI;
 
     public MoveTo moveTo;
+
+    public GameManager gameManager;
     void Update()
     {
         if (CheckButtonCoolDown())
