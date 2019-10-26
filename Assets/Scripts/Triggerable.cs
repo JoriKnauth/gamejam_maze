@@ -10,6 +10,7 @@ public class Triggerable : MonoBehaviour
 
     [SerializeField] protected SoundEffect soundEffect;
 
+    [ContextMenu("Trigger")]
     public virtual void Triggered()
     {
         triggerLight.enabled = isTriggered;
