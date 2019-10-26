@@ -6,8 +6,13 @@ public class Triggerable : MonoBehaviour
 {
     [SerializeField] protected bool isTriggered;
 
+    [SerializeField] protected Light triggerLight;
+
+    [SerializeField] protected SoundEffect soundEffect;
+
     public virtual void Triggered()
     {
-
+        triggerLight.enabled = isTriggered;
+        soundEffect.Play();
     }
 }
