@@ -47,5 +47,9 @@ MonoBehaviour:
   winScreen: {fileID: 0}
   winScreenDelay: 3
   winScreenAnimation: {fileID: 0}
-  WinMeshes: []
+  WinMeshes:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   winItems: 0

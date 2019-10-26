@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1350435873654544119}
   - component: {fileID: 1350435873654544118}
   - component: {fileID: 1350435873654544116}
+  - component: {fileID: 1404996614}
   m_Layer: 0
   m_Name: MainCameraFollow
   m_TagString: Untagged
@@ -70,6 +71,25 @@ MonoBehaviour:
   zoomIn: 8
   zoomOut: 33
   camera: {fileID: 1350435874731113905}
+--- !u!95 &1404996614
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1350435873654544113}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 183c71f2c284c4d4c8952ea3fd380894, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1350435874731113907
 GameObject:
   m_ObjectHideFlags: 0

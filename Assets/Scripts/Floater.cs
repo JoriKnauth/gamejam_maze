@@ -33,11 +33,11 @@ public class Floater : MonoBehaviour
     void Update()
     {
         // Spin object around Y-Axis
-        transform.Rotate(new Vector3(0f, Mathf.Sin(Time.fixedTime * Mathf.PI * frequencyRotation) * amplitudeRotation, 0f), Space.World);
+        transform.Rotate(new Vector3(0f, Mathf.Sin(Time.time * Mathf.PI * frequencyRotation) * amplitudeRotation * Time.deltaTime, 0f), Space.World);
 
         // Float up/down with a Sin()
         tempPos = transform.position;
-        tempPos.y += Mathf.Sin(Time.fixedTime * Mathf.PI * frequency) * amplitude;
+        tempPos.y += Mathf.Sin(Time.time * Mathf.PI * frequency) * amplitude * Time.deltaTime;
 
         transform.position = tempPos;
     }

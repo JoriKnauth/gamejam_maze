@@ -17,4 +17,17 @@ public class UI : MonoBehaviour
 
         listItems[index].enabled = true;
     }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            QuitButton();
+        }
+    }
+
+    public void QuitButton()
+    {
+        Application.Quit();
+    }
 }
