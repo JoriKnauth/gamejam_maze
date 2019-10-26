@@ -1446,6 +1446,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MapCamera: {fileID: 2033976886}
+  winScreen: {fileID: 0}
+  winScreenDelay: 0
 --- !u!4 &425705599
 Transform:
   m_ObjectHideFlags: 0
