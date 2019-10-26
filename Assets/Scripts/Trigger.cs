@@ -10,6 +10,20 @@ public class Trigger : MonoBehaviour
 
     public SoundEffect soundEffect;
 
+    public Renderer renderer;
+    private Material material;
+
+    public Color EmissionColorEnabled;
+    public Color EmissionColorDisabled;
+
+    private bool isTriggered;
+
+    private void Awake()
+    {
+        material = renderer.material;
+        material.SetColor("_EmissionColor", EmissionColorDisabled);
+    }
+
     private void Start()
     {
         gameManager = GameManager.Instance;
@@ -17,6 +31,8 @@ public class Trigger : MonoBehaviour
 
     public virtual void DOTrigger()
     {
+        isTriggered = !isTriggered;
+
         for (int i = 0; i < triggereable.Length; i++)
         {
             triggereable[i].Triggered();
@@ -25,6 +41,8 @@ public class Trigger : MonoBehaviour
         soundEffect.Play();
 
         SetCamera();
+
+        material.SetColor("_EmissionColor", isTriggered ? EmissionColorEnabled : EmissionColorDisabled);
     }
 
     public void SetCamera()

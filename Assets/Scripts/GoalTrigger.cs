@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GoalTrigger : Trigger
+public class GoalTrigger : MonoBehaviour
 {
     public GameManager gameManager;
 
-    public override void DOTrigger()
+    public void DOTrigger()
     {
         gameManager.Win();
 

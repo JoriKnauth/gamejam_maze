@@ -207,6 +207,9 @@ MonoBehaviour:
   triggereable:
   - {fileID: 0}
   soundEffect: {fileID: 9200704792972505393}
+  renderer: {fileID: 6777476054938931072}
+  EmissionColorEnabled: {r: 0, g: 0, b: 0, a: 0}
+  EmissionColorDisabled: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &4030699244205196192
 BoxCollider:
   m_ObjectHideFlags: 0
