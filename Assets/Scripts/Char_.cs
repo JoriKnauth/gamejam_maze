@@ -33,6 +33,7 @@ public class Char_ : MonoBehaviour
 
     public UI uI;
 
+    public MoveTo moveTo;
     void Update()
     {
         if (CheckButtonCoolDown())
@@ -40,7 +41,14 @@ public class Char_ : MonoBehaviour
             if (Input.anyKey)
             {
                 SetButtonCoolDown();
-                if (isZoomedOut)
+                if (Input.GetKey(KeyCode.Space))
+                {
+                    if (trigger)
+                    {
+                        trigger.DOTrigger();
+                    }
+                }
+                else if (isZoomedOut)
                 {
                     mapCamera.ZoomIn();
                 }
@@ -48,7 +56,6 @@ public class Char_ : MonoBehaviour
 
             if (Input.GetKey(KeyCode.W))
             {
-                SetButtonCoolDown();
                 thistransform.eulerAngles = directionFacing[0];
                 if (CheckCollidion())
                 {
@@ -57,7 +64,6 @@ public class Char_ : MonoBehaviour
             }
             else if (Input.GetKey(KeyCode.S))
             {
-                SetButtonCoolDown();
                 thistransform.eulerAngles = directionFacing[1];
                 if (CheckCollidion())
                 {
@@ -66,7 +72,6 @@ public class Char_ : MonoBehaviour
             }
             else if (Input.GetKey(KeyCode.A))
             {
-                SetButtonCoolDown();
                 thistransform.eulerAngles = directionFacing[2];
                 if (CheckCollidion())
                 {
@@ -75,19 +80,10 @@ public class Char_ : MonoBehaviour
             }
             else if (Input.GetKey(KeyCode.D))
             {
-                SetButtonCoolDown();
                 thistransform.eulerAngles = directionFacing[3];
                 if (CheckCollidion())
                 {
                     Move(3);
-                }
-            }
-            else if (Input.GetKey(KeyCode.Space))
-            {
-                SetButtonCoolDown();
-                if (trigger)
-                {
-                    trigger.DOTrigger();
                 }
             }
         }
@@ -123,6 +119,8 @@ public class Char_ : MonoBehaviour
     private void Move(int direction)
     {
         thistransform.localPosition = thistransform.localPosition + directionVector[direction] * tilelenght;
+
+        moveTo.Move(thistransform.position);
 
         lookat.SetLook(thistransform.position);
     }

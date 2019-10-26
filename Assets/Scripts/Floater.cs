@@ -15,6 +15,8 @@ public class Floater : MonoBehaviour
     public float degreesPerSecond = 15.0f;
     public float amplitude = 0.5f;
     public float frequency = 1f;
+    public float amplitudeRotation = 0.5f;
+    public float frequencyRotation = 1f;
 
     // Position Storage Variables
     Vector3 posOffset = new Vector3();
@@ -31,7 +33,7 @@ public class Floater : MonoBehaviour
     void Update()
     {
         // Spin object around Y-Axis
-        //transform.Rotate(new Vector3(0f, Time.deltaTime * degreesPerSecond, 0f), Space.World);
+        transform.Rotate(new Vector3(0f, Mathf.Sin(Time.fixedTime * Mathf.PI * frequencyRotation) * amplitudeRotation, 0f), Space.World);
 
         // Float up/down with a Sin()
         tempPos = transform.position;
