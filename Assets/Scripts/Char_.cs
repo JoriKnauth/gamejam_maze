@@ -139,6 +139,13 @@ public class Char_ : MonoBehaviour
         Trigger _trigger = other.GetComponent<Trigger>();
         if (_trigger != null)
         {
+            GoalTrigger _goalTrigger = other.GetComponent<GoalTrigger>();
+            if (_goalTrigger != null)
+            {
+                _goalTrigger.DOTrigger();
+                return;
+            }
+
             trigger = _trigger;
             return;
         }
@@ -147,6 +154,8 @@ public class Char_ : MonoBehaviour
         if (_collectable != null)
         {
             uI.SetListItem(_collectable.ID);
+
+            gameManager.AddWinItems();
 
             _collectable.thisGameObject.SetActive(false);
 

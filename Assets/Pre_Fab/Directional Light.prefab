@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 188047997158647399}
   - component: {fileID: 188047997158647398}
+  - component: {fileID: 1615781534}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -41,8 +42,8 @@ Light:
   m_Enabled: 1
   serializedVersion: 9
   m_Type: 1
-  m_Color: {r: 0.54718864, g: 0.52198297, b: 0.9622642, a: 1}
-  m_Intensity: 0.07
+  m_Color: {r: 0.3410967, g: 0.2971698, b: 1, a: 1}
+  m_Intensity: 0.1
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -87,7 +88,23 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0.328125, y: 0.1875, z: 0.03125, w: -0.03515625}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &1615781534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 188047997158647397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a8f1082b71d69f439163331874efb43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  light: {fileID: 188047997158647398}
+  minIntensity: 0
+  maxIntensity: 0.22
+  smoothing: 60

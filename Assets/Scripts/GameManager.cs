@@ -15,14 +15,19 @@ public class GameManager : MonoBehaviour
     public float winScreenDelay;
 
     public Animator winScreenAnimation;
+    public float animationDelay;
 
     public GameObject[] WinMeshes;
 
     public int winItems;
 
+    public Char_ char_;
+
     internal void Win()
     {
-        winScreen.SetActive(true);
+        Debug.Log("Win");
+
+        char_.enabled = false;
 
         StartCoroutineWaitForSec();
 
@@ -62,13 +67,17 @@ public class GameManager : MonoBehaviour
 
     IEnumerator Example()
     {
-        yield return new WaitForSeconds(winScreenDelay);
+        yield return new WaitForSeconds(animationDelay);
 
         if (winScreenAnimation != null)
         {
             winScreenAnimation.enabled = true;
             winScreenAnimation.SetTrigger("Win");
         }
+
+        yield return new WaitForSeconds(winScreenDelay);
+
+        winScreen.SetActive(true);
     }
 
 
