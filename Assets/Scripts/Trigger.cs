@@ -8,6 +8,8 @@ public class Trigger : MonoBehaviour
 
     private GameManager gameManager;
 
+    private SoundEffect soundEffect;
+
     private void Start()
     {
         gameManager = GameManager.Instance;
@@ -19,6 +21,8 @@ public class Trigger : MonoBehaviour
         {
             triggereable[i].Triggered();
         }
+
+        soundEffect.Play();
 
         SetCamera();
     }
