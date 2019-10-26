@@ -32,6 +32,7 @@ Transform:
   m_Children:
   - {fileID: 332876665758541439}
   - {fileID: 5889735590533242907}
+  - {fileID: 1002299187466108908}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -61,7 +62,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.25
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &-1338533457658834272
 MonoBehaviour:
@@ -80,6 +81,81 @@ MonoBehaviour:
   - {fileID: 8300000, guid: b81dfca8cc1e5448487d2272e8a563ed, type: 3}
   - {fileID: 8300000, guid: 95202c9fa8bf64e7ab7edc14b8015c51, type: 3}
   - {fileID: 8300000, guid: b92d91d8086f94fab82c74326b73bff3, type: 3}
+--- !u!1001 &4501720382974220395
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 201399344657272756}
+    m_Modifications:
+    - target: {fileID: 8250360767906320456, guid: c61c2122cb87abc428a7808929eb9598,
+        type: 3}
+      propertyPath: m_Name
+      value: Collectable Light
+      objectReference: {fileID: 0}
+    - target: {fileID: 3715948094538655623, guid: c61c2122cb87abc428a7808929eb9598,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3715948094538655623, guid: c61c2122cb87abc428a7808929eb9598,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3715948094538655623, guid: c61c2122cb87abc428a7808929eb9598,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3715948094538655623, guid: c61c2122cb87abc428a7808929eb9598,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3715948094538655623, guid: c61c2122cb87abc428a7808929eb9598,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3715948094538655623, guid: c61c2122cb87abc428a7808929eb9598,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3715948094538655623, guid: c61c2122cb87abc428a7808929eb9598,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3715948094538655623, guid: c61c2122cb87abc428a7808929eb9598,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3715948094538655623, guid: c61c2122cb87abc428a7808929eb9598,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3715948094538655623, guid: c61c2122cb87abc428a7808929eb9598,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3715948094538655623, guid: c61c2122cb87abc428a7808929eb9598,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c61c2122cb87abc428a7808929eb9598, type: 3}
+--- !u!4 &1002299187466108908 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3715948094538655623, guid: c61c2122cb87abc428a7808929eb9598,
+    type: 3}
+  m_PrefabInstance: {fileID: 4501720382974220395}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4747965394500996453
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -87,6 +163,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 201399344657272756}
     m_Modifications:
+    - target: {fileID: -927199367670048503, guid: 8dc77a7e7ee60a84da214696db60eddc,
+        type: 3}
+      propertyPath: m_Name
+      value: Soil_Bag_2
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 8dc77a7e7ee60a84da214696db60eddc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -141,11 +222,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: 8dc77a7e7ee60a84da214696db60eddc,
-        type: 3}
-      propertyPath: m_Name
-      value: Soil_Bag_2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8dc77a7e7ee60a84da214696db60eddc, type: 3}

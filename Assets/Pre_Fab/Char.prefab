@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1fbc527c439fa14b89308a5c5a14285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  raylenght: 1.1
+  raylenght: 2
   tilelenght: 1
   distanceCheck: 1.1
   moveDuration: 0
