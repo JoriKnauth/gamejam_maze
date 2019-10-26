@@ -13,6 +13,7 @@ public class SoundEffectCycle : SoundEffect
     {
         isTriggered = !isTriggered;
         audioSource.clip = isTriggered ? openSound : closeSound;
+
         audioSource.Play();
     }
 }

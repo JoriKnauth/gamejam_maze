@@ -66,6 +66,7 @@ public class GameManager : MonoBehaviour
 
         if (winScreenAnimation != null)
         {
+            winScreenAnimation.enabled = true;
             winScreenAnimation.SetTrigger("Win");
         }
     }
