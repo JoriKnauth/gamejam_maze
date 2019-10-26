@@ -8,7 +8,7 @@ public class Trigger : MonoBehaviour
 
     private GameManager gameManager;
 
-    private SoundEffect soundEffect;
+    public SoundEffect soundEffect;
 
     private void Start()
     {
