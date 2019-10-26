@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SoundEffectRandom : MonoBehaviour
+public class SoundEffectRandom : SoundEffect
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    [SerializeField] private AudioClip[] audioClips;
+    public override void Play()
     {
-        
+        if (!audioSource)
+        {
+            return;
+        }
+        audioSource.clip = audioClips[Random.Range(0, audioClips.Length - 1)];
+        audioSource.Play();
     }
 }
