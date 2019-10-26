@@ -148,6 +148,8 @@ public class Char_ : MonoBehaviour
             uI.SetListItem(_collectable.ID);
 
             _collectable.thisGameObject.SetActive(false);
+
+            _collectable.soundEffect.Play();
         }
     }
 

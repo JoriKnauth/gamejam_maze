@@ -6,5 +6,7 @@ public class Collectable : MonoBehaviour
 {
     public GameObject thisGameObject;
 
+    public SoundEffect soundEffect;
+
     public int ID;
 }
