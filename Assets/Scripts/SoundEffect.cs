@@ -9,6 +9,10 @@ public class SoundEffect : MonoBehaviour
     [ContextMenu("Play")]
     public virtual void Play()
     {
+        if (!audioSource)
+        {
+            return;
+        }
         audioSource.Play();
     }
 }
