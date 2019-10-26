@@ -15,4 +15,10 @@ public class SoundEffect : MonoBehaviour
         }
         audioSource.Play();
     }
+
+    [ContextMenu("Stop")]
+    public void Stop()
+    {
+        audioSource.Stop();
+    }
 }
