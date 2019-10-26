@@ -12,5 +12,4 @@ public class TriggerableDoor : Triggerable
         isTriggered = !isTriggered;
         thisGameObject.SetActive(isTriggered);
     }
-
 }
