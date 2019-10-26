@@ -8,6 +8,10 @@ public class GameManager : MonoBehaviour
 
     public MapCamera MapCamera;
 
+    public GameObject winScreen;
+
+    public float winScreenDelay;
+
     private void Awake()
     {
         if (Instance != null)
@@ -17,4 +21,6 @@ public class GameManager : MonoBehaviour
 
         Instance = this;
     }
+
+
 }

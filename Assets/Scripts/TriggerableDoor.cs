@@ -8,6 +8,7 @@ public class TriggerableDoor : Triggerable
 
     public override void Triggered()
     {
+        base.Triggered();
         isTriggered = !isTriggered;
         thisGameObject.SetActive(isTriggered);
     }
