@@ -32,6 +32,7 @@ public class TriggerableDoor : Triggerable
     {
         DOTween.Kill(moveTween);
 
-        moveTween = thisTransform.DOMove(position, moveDuration, false).SetEase(easeType);
+
+        moveTween = thisTransform.DOLocalMove(position, moveDuration, false).SetEase(easeType);
     }
 }
