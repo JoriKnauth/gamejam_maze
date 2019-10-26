@@ -44,3 +44,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MapCamera: {fileID: 0}
+  winScreen: {fileID: 0}
+  winScreenDelay: 3
+  winScreenAnimation: {fileID: 0}
+  WinMeshes: []
+  winItems: 0
