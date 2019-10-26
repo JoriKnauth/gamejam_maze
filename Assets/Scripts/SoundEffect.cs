@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class SoundEffect : MonoBehaviour
 {
-    [SerializeField] private AudioSource audioSource;
+    [SerializeField] protected AudioSource audioSource;
 
     [ContextMenu("Play")]
-    public void Play()
+    public virtual void Play()
     {
         audioSource.Play();
     }
