@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class UI : MonoBehaviour
 {
-    public TextMeshProUGUI[] listItems;
+    public Image[] listItems;
 
     public void SetListItem(int index)
     {
