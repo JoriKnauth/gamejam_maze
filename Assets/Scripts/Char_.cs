@@ -136,16 +136,16 @@ public class Char_ : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
+        GoalTrigger _goalTrigger = other.GetComponent<GoalTrigger>();
+        if (_goalTrigger != null)
+        {
+            _goalTrigger.DOTrigger();
+            return;
+        }
+
         Trigger _trigger = other.GetComponent<Trigger>();
         if (_trigger != null)
         {
-            GoalTrigger _goalTrigger = other.GetComponent<GoalTrigger>();
-            if (_goalTrigger != null)
-            {
-                _goalTrigger.DOTrigger();
-                return;
-            }
-
             trigger = _trigger;
             return;
         }
